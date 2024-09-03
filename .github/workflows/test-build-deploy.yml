@@ -112,7 +112,7 @@ jobs:
           sudo mkdir -p /go/src/github.com/cortexproject/cortex
           sudo ln -s $GITHUB_WORKSPACE/* /go/src/github.com/cortexproject/cortex
       - name: Download Docker Images Artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Docker Images
       - name: Extract Docker Images Archive
@@ -163,7 +163,7 @@ jobs:
       - name: Install Docker Client
         run: sudo ./.github/workflows/scripts/install-docker.sh
       - name: Download Docker Images Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Docker Images
       - name: Extract Docker Images Archive
@@ -192,7 +192,7 @@ jobs:
           mkdir -p /go/src/github.com/cortexproject/cortex
           ln -s $GITHUB_WORKSPACE/* /go/src/github.com/cortexproject/cortex
       - name: Download Website Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: website public
           path: website/public
@@ -228,7 +228,7 @@ jobs:
           mkdir -p /go/src/github.com/cortexproject/cortex
           ln -s $GITHUB_WORKSPACE/* /go/src/github.com/cortexproject/cortex
       - name: Download Docker Images Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Docker Images
       - name: Extract Docker Images Archive
